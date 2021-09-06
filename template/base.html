@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+
+  <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+{% include 'components/navbar.html' %}
+<div class = "container mt-6">
+  <div class="row">
+    <div class ="col">
+      {% block content %} {% endblock %}
+
+
+    </div>
+
+    <div class ="col-sm-1">
+
+
+    </div>
+  </div>
+
+</div>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+{% include 'components/footer.html' %}
+
+</body>
+</html>
